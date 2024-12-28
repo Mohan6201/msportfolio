@@ -18,7 +18,7 @@ const HeroText = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0 }}
-        className="md:text-5xl lg:text-7xl sm:text-4xl text-orange font-bold"
+        className="md:text-[2.8rem] lg:text-6xl sm:text-4xl text-orange font-bold uppercase"
       >
         Abdelrahman <br className="sm:hidden md:block" />
         Qassem
@@ -30,10 +30,8 @@ const HeroText = () => {
         viewport={{ once: false, amount: 0 }}
         className="text-lg mt-4"
       >
-        A Passionate Web Developer and Instructor
-        <br />
-        Helping Students Master React
-        <br /> and Full-Stack Development.
+        A Passionate Web Developer and Instructor <br /> with 3 years of
+        experience.
       </motion.p>
     </div>
   );
