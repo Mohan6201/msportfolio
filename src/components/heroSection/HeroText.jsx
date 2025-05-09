@@ -11,7 +11,7 @@ const HeroText = () => {
         viewport={{ once: false, amount: 0 }}
         className="lg:text-2xl sm:text-xl  uppercase text-lightGrey "
       >
-        Front-End Web Developer
+        AWS Dev - Ops Engineer
       </motion.h2>
       <motion.h1
         variants={fadeIn("right", 0.4)}
@@ -20,8 +20,8 @@ const HeroText = () => {
         viewport={{ once: false, amount: 0 }}
         className="md:text-[2.8rem] lg:text-6xl sm:text-4xl text-orange font-bold uppercase"
       >
-        Abdelrahman <br className="sm:hidden md:block" />
-        Qassem
+        Mohana <br className="sm:hidden md:block" />
+        Srinivasan
       </motion.h1>
       <motion.p
         variants={fadeIn("up", 0.6)}
@@ -30,8 +30,8 @@ const HeroText = () => {
         viewport={{ once: false, amount: 0 }}
         className="text-lg mt-4"
       >
-        A Passionate Web Developer and Instructor <br /> with 3 years of
-        experience.
+        AWS DevOps Engineer with 3.2 years of experience in automating  <br />  infrastructure, implementing CI/CD pipelines, and optimizing 
+        system <br /> performance using AWS services.
       </motion.p>
     </div>
   );
