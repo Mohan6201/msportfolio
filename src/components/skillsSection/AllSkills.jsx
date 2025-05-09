@@ -1,5 +1,5 @@
 import SingleSkill from "./SingleSkill";
-import { FaHtml5 } from "react-icons/fa";
+import { FaAws, FaDocker, FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { SiTypescript } from "react-icons/si";
@@ -13,7 +13,7 @@ import { fadeIn } from "../../framerMotion/variants";
 const skills = [
   {
     skill: "HTML",
-    icon: FaHtml5,
+    icon: FaAws,
   },
   {
     skill: "CSS",
