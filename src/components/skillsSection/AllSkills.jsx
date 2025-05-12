@@ -1,47 +1,58 @@
 import SingleSkill from "./SingleSkill";
-import { FaAws, FaDocker, FaHtml5 } from "react-icons/fa";
+import { FaAws, FaDocker, FaHtml5, FaJenkins, FaLinux } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
-import { SiTypescript } from "react-icons/si";
+import { SiGithubactions, SiKubernetes, SiLinux, SiPython, SiTerraform, SiTypescript } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { SiRedux } from "react-icons/si";
 import { SiNextdotjs } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
+import { TbBrandAnsible } from "react-icons/tb";
+import { FcLinux } from "react-icons/fc";
+import { DiJenkins } from "react-icons/di";
 
 const skills = [
   {
-    skill: "HTML",
+    skill: "Aws Services",
     icon: FaAws,
   },
   {
-    skill: "CSS",
-    icon: FaCss3Alt,
+    skill: "Docker",
+    icon: FaDocker,
   },
   {
-    skill: "JavaScript",
-    icon: IoLogoJavascript,
+    skill: "Kubernetes",
+    icon: SiKubernetes,
   },
   {
-    skill: "TypeScript",
-    icon: SiTypescript,
+    skill: "Github Actions",
+    icon: SiGithubactions,
+  },
+  {
+    skill: "Python Shell Scripting",
+    icon: SiPython,
   },
   {
     skill: "ReactJS",
     icon: FaReact,
   },
   {
-    skill: "Redux",
-    icon: SiRedux,
+    skill: "Ansible",
+    icon: TbBrandAnsible,
   },
   {
-    skill: "NextJS",
-    icon: SiNextdotjs,
+    skill: "Terraform",
+    icon: SiTerraform,
   },
   {
-    skill: "TailwindCSS",
-    icon: RiTailwindCssFill,
+    skill: "Jenkins",
+    icon: FaJenkins,
+  },
+  {
+    skill: "Linux",
+    icon: SiLinux,
   },
 ];
 
