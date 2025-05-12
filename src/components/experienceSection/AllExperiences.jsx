@@ -5,34 +5,36 @@ import { fadeIn } from "../../framerMotion/variants";
 
 const experiences = [
   {
-    job: "Front-End Developer",
-    company: "Alex Apps",
+    job: "Trainee Consultant",
+    company: "Enterprise SoftLabs Pvt Ltd",
     date: "2022 - Present",
     responsibilities: [
-      "Implementing reusable components.",
-      "Participating in large scale application.",
-      "Working on the performance of web applications.",
-      "Generating new ideas for better user experience.",
+      "Managing Supply Chain Management change requests for Maersk.",
+      "Analyzed and modified SQL stored procedures using SSMS.",
+      "Troubleshot Azure and Cisco VPN Connectivity and Server Network Issues.",
+      "Handling product installation and configuration.",
+      "Administering Windows Active Directory.",
     ],
   },
   {
-    job: "Course Instructor",
-    company: "Nucamp",
+    job: "Staff Consultant",
+    company: "Enterprise SoftLabs Pvt Ltd",
     date: "2023 - Present",
     responsibilities: [
-      "Explaining and facilitating web development concepts.",
-      "Help students with their assignments and grade them weekly.",
-      "Provide support for students through their learning journey.",
+      "Migrated projects from HighJump to Körber (DB, apps, configs, Bartender, IIS, Remote Printers) for all three Environments(Dev, Uat, Prod).",
+      "Managed Wms deployments across all environments with High Scalability.",
+      "Installed and configured Windows Server 2022 on a physical machine for organizational use.",
     ],
   },
   {
-    job: "Course Instructor",
-    company: "Sprints",
-    date: "2024 - Present",
+    job: "Aws Dev-Ops Engineer",
+    company: "Enterprise SoftLabs Pvt Ltd",
+    date: "2025 - Present",
     responsibilities: [
-      "Teaching JavaScript, React and TailwindCSS.",
-      "Participating in preparing course materials.",
-      "Helping students through their way in learning web development technologies.",
+      "Built CI/CD for Txenia AI/ML WMS app using CodePipeline and GitHub Actions.",
+      "Managed AWS (EC2, S3, IAM, Route 53) for scalable infrastructure.",
+      "Monitored app with CloudWatch and set up custom alerts.",
+      "Deployed Dockerized services like prediction, data sync, and reporting via ECS.",
     ],
   },
 ];
