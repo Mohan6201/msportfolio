@@ -12,6 +12,7 @@ import { fadeIn } from "../../framerMotion/variants";
 import { TbBrandAnsible } from "react-icons/tb";
 import { FcLinux } from "react-icons/fc";
 import { DiJenkins } from "react-icons/di";
+import { GiArtificialIntelligence } from "react-icons/gi";
 
 const skills = [
   {
@@ -51,10 +52,13 @@ const skills = [
     icon: FaJenkins,
   },
   {
+    skill: "AI-ML Model Deployments",
+    icon: GiArtificialIntelligence,
+  },
+  {
     skill: "Linux",
     icon: SiLinux,
-  },
-];
+  },];
 
 const AllSkills = () => {
   return (
