@@ -8,8 +8,8 @@ import { FaReact } from "react-icons/fa";
 
 const CertificateCard = ({
   icon: IconComponent = PiCertificateBold,
-  iconSize = "50%", // Controlled via percentage or rem
-  sectionWidth = "100%", // Controlled via percentage
+  iconSize = "3rem", // Increased icon size
+  sectionWidth = "100%", // Full width section
 }) => {
   const [expandedIndex, setExpandedIndex] = useState(null);
 
@@ -46,7 +46,7 @@ const CertificateCard = ({
   return (
     <div
       className="flex flex-col gap-10 relative border-l-4 border-gray-600 ml-6"
-      style={{ width: sectionWidth }} // Apply the section width
+      style={{ width: sectionWidth }}
     >
       {certificates.map((cert, index) => (
         <React.Fragment key={index}>
@@ -69,40 +69,39 @@ const CertificateCard = ({
 
             {/* Certificate Content */}
             <motion.div
-              className="bg-[#1c1f24] rounded-xl p-5 shadow-xl border border-gray-700 transition-all duration-500"
-              whileHover={{ scale: 1.02 }} // Zoom effect on hover
+              className="bg-[#1c1f24] rounded-xl p-5 shadow-xl border border-gray-700 transition-all duration-500 mx-auto"
+              whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               style={{
-                width: "100%", // Full width within the section
-                maxWidth: "100%", // Ensure it doesn't exceed the section
+                width: "100%",
+                maxWidth: "900px", // Increased and centered
               }}
             >
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-left">
-                {/* === Left Side Icon and Certificate Info === */}
                 <div className="flex items-start gap-4 w-full">
-                  {/* Icon Section - Editable */}
+                  {/* Icon */}
                   <div
-                    className={`rounded-full flex items-center justify-center text-orange mt-1`}
-                    style={{ fontSize: iconSize }} // Apply icon size
+                    className="rounded-full flex items-center justify-center text-orange mt-1"
+                    style={{ fontSize: iconSize }}
                   >
                     <IconComponent />
                   </div>
 
                   {/* Certificate Details */}
                   <div className="flex-1">
-                    {/* Certificate Title */}
-                    <h3 className="text-xl font-semibold text-orange">{cert.title}</h3>
+                    <h3 className="text-xl font-semibold text-orange">
+                      {cert.title}
+                    </h3>
 
-                    {/* Issuer & Date below Title */}
                     <div className="text-sm mt-1 flex flex-col sm:flex-row sm:items-center sm:gap-4">
                       <span className="text-blue-400">{cert.issuer}</span>
-                      <span className="text-gray-400">{new Date(cert.date).toDateString()}</span>
+                      <span className="text-gray-400">
+                        {new Date(cert.date).toDateString()}
+                      </span>
                     </div>
 
-                    {/* Description */}
                     <p className="text-sm text-gray-300 mt-2">{cert.description}</p>
 
-                    {/* External Link */}
                     {cert.link && (
                       <a
                         href={cert.link}
