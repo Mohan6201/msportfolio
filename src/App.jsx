@@ -24,8 +24,8 @@ function App() {
       <AboutMeMain />
       <SkillsMain />
       <SubSkills />
-      <CertificateMain />
       <ExperienceMain />
+      <CertificateMain />
       <ProjectsMain />
       <ResumeMain />
       <ContactMeMain />
