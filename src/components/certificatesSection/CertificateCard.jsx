@@ -1,0 +1,177 @@
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../framerMotion/variants";
+import { FaArrowDownLong } from "react-icons/fa6";
+import { PiCertificateBold } from "react-icons/pi";
+import { AiOutlineDown, AiOutlineUp, AiOutlineLink } from "react-icons/ai";
+import { FaReact } from "react-icons/fa";
+
+const CertificateCard = ({
+  icon: IconComponent = PiCertificateBold,
+  iconSize = "50%", // Controlled via percentage or rem
+  sectionWidth = "100%", // Controlled via percentage
+}) => {
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const toggleImage = (index) => {
+    setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
+  const certificates = [
+    {
+      title: "Amazon Solution Architect Associate",
+      issuer: "RedSys9 Tech Pvt Ltd",
+      date: "2025-04-21",
+      description: "Completed a comprehensive Amazon Solution Architect Associate course.",
+      image: "images/ASA Certificate.jfif",
+    },
+    {
+      title: "Warehouse Advantage Certified Associate",
+      issuer: "Korber Supply Chain",
+      date: "2023-09-09",
+      description: "Completed an in-depth certification on Warehouse Advantage & Supply Chain.",
+      link: "https://www.credly.com/badges/e12dca0f-078f-40ab-b8e9-647121ddf599/linked_in_profile",
+      image: "images/Korber.png",
+    },
+    {
+      title: "Full Stack Developer",
+      issuer: "3Edge Solutions Pvt Ltd",
+      date: "2022-12-27",
+      description: "Completed an in-depth certification on Warehouse Advantage & Supply Chain.",
+      link: "https://www.credly.com/badges/e12dca0f-078f-40ab-b8e9-647121ddf599/linked_in_profile",
+      image: "images/3Edge.png",
+    },
+  ];
+
+  return (
+    <div
+      className="flex flex-col gap-10 relative border-l-4 border-gray-600 ml-6"
+      style={{ width: sectionWidth }} // Apply the section width
+    >
+      {certificates.map((cert, index) => (
+        <React.Fragment key={index}>
+          {/* === Certificate Box === */}
+          <motion.div
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.7 }}
+            className="relative pl-10"
+          >
+            {/* React Logo Floating */}
+            <motion.div
+              whileHover={{ scale: 1.3, rotate: [0, 10, -10, 0] }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="absolute -left-5 top-1 z-10 text-cyan"
+            >
+              <FaReact className="text-4xl hover:drop-shadow-glow hover:text-blue-400 transition-all duration-300" />
+            </motion.div>
+
+            {/* Certificate Content */}
+            <motion.div
+              className="bg-[#1c1f24] rounded-xl p-5 shadow-xl border border-gray-700 transition-all duration-500"
+              whileHover={{ scale: 1.02 }} // Zoom effect on hover
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              style={{
+                width: "100%", // Full width within the section
+                maxWidth: "100%", // Ensure it doesn't exceed the section
+              }}
+            >
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-left">
+                {/* === Left Side Icon and Certificate Info === */}
+                <div className="flex items-start gap-4 w-full">
+                  {/* Icon Section - Editable */}
+                  <div
+                    className={`rounded-full flex items-center justify-center text-orange mt-1`}
+                    style={{ fontSize: iconSize }} // Apply icon size
+                  >
+                    <IconComponent />
+                  </div>
+
+                  {/* Certificate Details */}
+                  <div className="flex-1">
+                    {/* Certificate Title */}
+                    <h3 className="text-xl font-semibold text-orange">{cert.title}</h3>
+
+                    {/* Issuer & Date below Title */}
+                    <div className="text-sm mt-1 flex flex-col sm:flex-row sm:items-center sm:gap-4">
+                      <span className="text-blue-400">{cert.issuer}</span>
+                      <span className="text-gray-400">{new Date(cert.date).toDateString()}</span>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-sm text-gray-300 mt-2">{cert.description}</p>
+
+                    {/* External Link */}
+                    {cert.link && (
+                      <a
+                        href={cert.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-cyan hover:text-orange mt-2 text-sm inline-flex items-center gap-1"
+                      >
+                        <AiOutlineLink /> View Certificate
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* === Preview Image === */}
+              <motion.div className="mt-4 flex justify-center w-full" layout>
+                <div className="w-full max-w-3xl">
+                  <motion.img
+                    src={cert.image}
+                    alt="Certificate Preview"
+                    className="w-full h-auto border border-gray-600 rounded-md object-contain"
+                    layout
+                    initial={{ height: "auto", maxHeight: "8rem" }}
+                    animate={{
+                      maxHeight: expandedIndex === index ? "100%" : "8rem",
+                    }}
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  />
+                </div>
+              </motion.div>
+
+              {/* === Toggle Button === */}
+              <div className="mt-2">
+                <button
+                  onClick={() => toggleImage(index)}
+                  className="text-white text-sm flex items-center gap-1 bg-gray-700 px-3 py-1 rounded hover:bg-gray-600 transition-all"
+                >
+                  {expandedIndex === index ? (
+                    <>
+                      <AiOutlineUp />
+                      Hide Certificate
+                    </>
+                  ) : (
+                    <>
+                      <AiOutlineDown />
+                      Show Certificate
+                    </>
+                  )}
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* === Down Arrow (Except Last) === */}
+          {index < certificates.length - 1 && (
+            <motion.div
+              variants={fadeIn("up", 0.2)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.5 }}
+              className="flex justify-center ml-4"
+            >
+              <FaArrowDownLong className="text-3xl text-orange" />
+            </motion.div>
+          )}
+        </React.Fragment>
+      ))}
+    </div>
+  );
+};
+
+export default CertificateCard;
