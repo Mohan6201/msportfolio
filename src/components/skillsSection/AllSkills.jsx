@@ -1,17 +1,10 @@
 import SingleSkill from "./SingleSkill";
-import { FaAws, FaDocker, FaHtml5, FaJenkins, FaLinux } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io";
-import { SiGithubactions, SiKubernetes, SiLinux, SiPython, SiTerraform, SiTypescript } from "react-icons/si";
+import { FaAws, FaDocker, FaJenkins } from "react-icons/fa";
+import { SiGithubactions, SiKubernetes, SiLinux, SiPython, SiTerraform } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
-import { SiRedux } from "react-icons/si";
-import { SiNextdotjs } from "react-icons/si";
-import { RiTailwindCssFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
 import { TbBrandAnsible } from "react-icons/tb";
-import { FcLinux } from "react-icons/fc";
-import { DiJenkins } from "react-icons/di";
 import { GiArtificialIntelligence } from "react-icons/gi";
 
 const skills = [
@@ -58,7 +51,8 @@ const skills = [
   {
     skill: "Linux",
     icon: SiLinux,
-  },];
+  },
+];
 
 const AllSkills = () => {
   return (

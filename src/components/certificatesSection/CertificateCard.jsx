@@ -8,7 +8,7 @@ import { FaReact } from "react-icons/fa";
 
 const CertificateCard = ({
   icon: IconComponent = PiCertificateBold,
-  iconSize = "3rem", // Increased icon size
+  iconSize = "5rem", // Increased icon size
   sectionWidth = "100%", // Full width section
 }) => {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -45,7 +45,7 @@ const CertificateCard = ({
 
   return (
     <div
-      className="flex flex-col gap-10 relative border-l-4 border-gray-600 ml-6"
+      className="flex flex-col gap-10 relative border-l-4 border-orange ml-6"
       style={{ width: sectionWidth }}
     >
       {certificates.map((cert, index) => (
@@ -69,7 +69,7 @@ const CertificateCard = ({
 
             {/* Certificate Content */}
             <motion.div
-              className="bg-[#1c1f24] rounded-xl p-5 shadow-xl border border-gray-700 transition-all duration-500 mx-auto"
+              className="bg-[#1c1f24] rounded-xl p-5 shadow-xl  transition-all duration-500 mx-auto"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               style={{
@@ -82,7 +82,7 @@ const CertificateCard = ({
                   {/* Icon */}
                   <div
                     className="rounded-full flex items-center justify-center text-orange mt-1"
-                    style={{ fontSize: iconSize }}
+                    style={{ fontSize: '30px' }}
                   >
                     <IconComponent />
                   </div>
@@ -94,8 +94,8 @@ const CertificateCard = ({
                     </h3>
 
                     <div className="text-sm mt-1 flex flex-col sm:flex-row sm:items-center sm:gap-4">
-                      <span className="text-blue-400">{cert.issuer}</span>
-                      <span className="text-gray-400">
+                      <span className="text-cyan ">{cert.issuer}</span>
+                      <span className="text-lightGrey">
                         {new Date(cert.date).toDateString()}
                       </span>
                     </div>
@@ -122,7 +122,7 @@ const CertificateCard = ({
                   <motion.img
                     src={cert.image}
                     alt="Certificate Preview"
-                    className="w-full h-auto border border-gray-600 rounded-md object-contain"
+                    className="w-full h-auto rounded-md object-contain"
                     layout
                     initial={{ height: "auto", maxHeight: "8rem" }}
                     animate={{
