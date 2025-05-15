@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { BsFillFileEarmarkArrowDownFill } from 'react-icons/bs';
 
-const ResumePreview = () => {
+const ResumePreview = ({ file }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showButtons, setShowButtons] = useState(false);
   const previewRef = useRef(null);
@@ -50,6 +51,15 @@ const ResumePreview = () => {
     };
   }, []);
 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = file;
+    link.download = "My_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <motion.div
       ref={previewRef}
@@ -62,9 +72,9 @@ const ResumePreview = () => {
         duration: 0.8,
         delay: 0.3,
       }}
-      className="w-full h-screen flex items-center justify-center p-0 m-0 bg-gray-900"
+      className="w-full flex items-center justify-center p-0 m-0 bg-gray-900"
     >
-      <div className="relative w-full max-w-screen-md aspect-[3/4] overflow-hidden bg-black rounded-lg shadow-xl">
+      <div className="relative w-full max-w-[420px] sm:max-w-[600px] aspect-[3/4] overflow-hidden bg-black rounded-lg shadow-lg mb-0 pb-0">
         <AnimatePresence mode="wait">
           <motion.img
             key={currentIndex}
@@ -104,7 +114,7 @@ const ResumePreview = () => {
         </motion.button>
 
         {/* Dots */}
-        <div className="absolute bottom-5 flex gap-3 justify-center w-full z-20">
+        <div className="absolute bottom-2 w-full flex justify-center items-center gap-2">
           {images.map((_, index) => (
             <span
               key={index}
@@ -115,6 +125,19 @@ const ResumePreview = () => {
               }`}
             />
           ))}
+        </div>
+
+        {/* Download Button */}
+        <div className="absolute top-4 right-4 z-30">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={handleDownload}
+            className="px-4 py-2 bg-cyan text-white rounded-md flex items-center gap-2 hover:bg-orange transition-all duration-300 shadow-md text-sm"
+          >
+            <BsFillFileEarmarkArrowDownFill className="text-base" />
+            Download
+          </motion.button>
         </div>
       </div>
     </motion.div>
