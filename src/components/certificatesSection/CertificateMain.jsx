@@ -7,7 +7,7 @@ const CertificateMain = () => {
   return (
     <section
       id="certificates"
-      className="min-h-screen w-full py-16 px-4 sm:px-10"
+      className="flex md:flex-row sm:flex-col gap-12 px-4 max-w-[1200px] mx-auto mt-[100px] justify-between items-center"
     >
       <div className="max-w-7xl mx-auto flex flex-col gap-20 items-center">
         {/* Heading */}
