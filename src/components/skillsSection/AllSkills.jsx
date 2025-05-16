@@ -4,7 +4,7 @@ import { SiGithubactions, SiKubernetes, SiLinux, SiPython, SiTerraform } from "r
 import { FaReact } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
-import { TbBrandAnsible } from "react-icons/tb";
+import { TbBrandAnsible, TbBrandDjango } from "react-icons/tb";
 import { GiArtificialIntelligence } from "react-icons/gi";
 
 const skills = [
@@ -27,6 +27,10 @@ const skills = [
   {
     skill: "Python Shell Scripting",
     icon: SiPython,
+  },
+  {
+    skill: "Django Framework",
+    icon: TbBrandDjango,
   },
   {
     skill: "ReactJS",

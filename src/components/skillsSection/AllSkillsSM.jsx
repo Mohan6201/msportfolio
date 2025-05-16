@@ -1,7 +1,7 @@
 import { FaAws, FaDocker, FaJenkins } from "react-icons/fa";
 import { SiGithubactions, SiKubernetes, SiLinux, SiPython, SiTerraform } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
-import { TbBrandAnsible } from "react-icons/tb";
+import { TbBrandAnsible, TbBrandDjango } from "react-icons/tb";
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
@@ -26,6 +26,10 @@ const skills = [
   {
     skill: "Python Shell Scripting",
     icon: SiPython,
+  },
+  {
+      skill: "Django Framework",
+      icon: TbBrandDjango,
   },
   {
     skill: "ReactJS",

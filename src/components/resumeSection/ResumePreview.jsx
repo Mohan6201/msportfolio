@@ -10,8 +10,8 @@ const ResumePreview = ({ file }) => {
   const lastMousePosition = useRef({ x: 0, y: 0 });
 
   const images = [
-    '../../public/images/Resume1.png',
-    '../../public/images/Resume2.png',
+    '/images/Resume1.png',
+    '/images/Resume2.png',
   ];
 
   const nextImage = () => {
