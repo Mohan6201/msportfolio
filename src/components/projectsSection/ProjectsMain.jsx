@@ -24,7 +24,7 @@ const projects = [
     name: "Portfolio Web App",
     year: "April2025",
     align: "left",
-    image: "/images/Reactp1.png",
+    image: "/images/Reactp2.png",
     link: "#",
     description: {
       responsibilities: [
