@@ -14,7 +14,7 @@ const SingleProject = ({ name, year, align, image, link, description }) => {
       setTimeout(() => {
         setShowDetails(true);
         setShowArrow(false);
-      }, 600); // a bit longer delay for arrow animation
+      }, 600);
     } else {
       setShowDetails(false);
     }
@@ -26,11 +26,11 @@ const SingleProject = ({ name, year, align, image, link, description }) => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.1 }}
-      className={`flex w-full sm:flex-col-reverse items-center gap-8 ${
+      className={`flex w-full items-center gap-8 relative justify-end ${
         align === "left" ? "md:flex-row" : "md:flex-row-reverse"
-      } justify-end sm:flex-col relative`}
+      } sm:flex-col sm:flex-col-reverse`}
     >
-      {/* Left Text Section */}
+      {/* Text Section */}
       <div className="flex-1 relative">
         <h2 className="md:text-3xl sm:text-2xl text-orange">{name}</h2>
         <h2
@@ -62,7 +62,7 @@ const SingleProject = ({ name, year, align, image, link, description }) => {
           </button>
         </div>
 
-        {/* Centered Downward Arrow */}
+        {/* Downward Arrow Animation */}
         <AnimatePresence>
           {showArrow && (
             <motion.div
@@ -77,30 +77,31 @@ const SingleProject = ({ name, year, align, image, link, description }) => {
           )}
         </AnimatePresence>
 
-        {/* Expanding Description Box */}
+        {/* Description Expandable Section */}
         <AnimatePresence>
           {showDetails && (
             <motion.div
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
+              transition={{
+                height: { duration: 0.6, ease: "easeInOut" },
+                opacity: { duration: 0.4, ease: "easeInOut", delay: 0.2 },
+              }}
               className="overflow-hidden mt-14"
             >
               <motion.div
-                variants={fadeIn("up", 0)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.1 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
                 className="border-orange border-dashed border-2 rounded-xl p-5 shadow-lg bg-[#1e1e1e] w-full max-w-[500px] mx-auto"
               >
                 <h3 className="text-cyan text-lg font-semibold">
                   {description.job}{" "}
                   <span className="text-orange">@ {description.company}</span>
                 </h3>
-                <p className="text-sm" style={{ color: "#A0A0A0" }}>
-                  {description.date}
-                </p>
+                <p className="text-sm text-gray-400">{description.date}</p>
                 <ul className="list-disc ml-5 mt-2 text-sm text-white space-y-1">
                   {description.responsibilities.map((item, idx) => (
                     <li key={idx}>{item}</li>
@@ -112,7 +113,7 @@ const SingleProject = ({ name, year, align, image, link, description }) => {
         </AnimatePresence>
       </div>
 
-      {/* Right Image Section */}
+      {/* Image Section */}
       <div className="flex-1 max-h-[220px] max-w-[400px] rounded-xl overflow-hidden hover:scale-110 transform transition-all duration-500 relative border border-white">
         <div className="w-full h-full bg-cyan opacity-50 absolute top-0 left-0 hover:opacity-0 transition-all duration-500 md:block sm:hidden"></div>
         <img src={image} alt="website preview" className="w-full h-full object-cover" />
