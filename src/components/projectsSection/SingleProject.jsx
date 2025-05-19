@@ -32,34 +32,38 @@ const SingleProject = ({ name, year, align, image, link, description }) => {
     >
       {/* Text Section */}
       <div className="flex-1 relative">
-        <h2 className="md:text-3xl sm:text-2xl text-orange">{name}</h2>
-        <h2
-          className={`text-xl font-thin text-white font-special sm:text-center ${
-            align === "left" ? "md:text-right" : "md:text-left"
-          }`}
-        >
-          {year}
-        </h2>
-
-        {/* Buttons */}
         <div
-          className={`flex gap-4 items-center mt-2 ${
-            align === "left" ? "md:justify-end" : "md:justify-start"
+          className={`flex flex-col ${
+            align === "left" ? "items-end text-right" : "items-start text-left"
           }`}
         >
-          <a
-            href={link}
-            className="text-lg flex gap-2 items-center text-cyan hover:text-orange transition-all duration-500 cursor-pointer"
-          >
-            View <BsFillArrowUpRightCircleFill />
-          </a>
+          <h2 className="md:text-3xl sm:text-2xl text-orange">{name}</h2>
+          <h2 className="text-xl font-thin text-white font-special sm:text-center mt-1">
+            {year}
+          </h2>
 
-          <button
-            onClick={handleDetailsClick}
-            className="text-lg flex gap-2 items-center text-cyan hover:text-orange transition-all duration-500 cursor-pointer"
+          {/* Buttons */}
+          <div
+            className={`flex gap-4 items-center mt-4 ${
+              align === "left" ? "justify-end" : "justify-start"
+            }`}
           >
-            Details <BsFillArrowUpRightCircleFill />
-          </button>
+            <a
+              href={link}
+              className="text-lg flex gap-2 items-center text-cyan hover:text-orange transition-all duration-500 cursor-pointer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View <BsFillArrowUpRightCircleFill />
+            </a>
+
+            <button
+              onClick={handleDetailsClick}
+              className="text-lg flex gap-2 items-center text-cyan hover:text-orange transition-all duration-500 cursor-pointer"
+            >
+              Details <BsFillArrowUpRightCircleFill />
+            </button>
+          </div>
         </div>
 
         {/* Downward Arrow Animation */}
@@ -97,11 +101,6 @@ const SingleProject = ({ name, year, align, image, link, description }) => {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 className="border-orange border-dashed border-2 rounded-xl p-5 shadow-lg bg-[#1e1e1e] w-full max-w-[500px] mx-auto"
               >
-                <h3 className="text-cyan text-lg font-semibold">
-                  {description.job}{" "}
-                  <span className="text-orange">@ {description.company}</span>
-                </h3>
-                <p className="text-sm text-gray-400">{description.date}</p>
                 <ul className="list-disc ml-5 mt-2 text-sm text-white space-y-1">
                   {description.responsibilities.map((item, idx) => (
                     <li key={idx}>{item}</li>
@@ -116,7 +115,11 @@ const SingleProject = ({ name, year, align, image, link, description }) => {
       {/* Image Section */}
       <div className="flex-1 max-h-[220px] max-w-[400px] rounded-xl overflow-hidden hover:scale-110 transform transition-all duration-500 relative border border-white">
         <div className="w-full h-full bg-cyan opacity-50 absolute top-0 left-0 hover:opacity-0 transition-all duration-500 md:block sm:hidden"></div>
-        <img src={image} alt="website preview" className="w-full h-full object-cover" />
+        <img
+          src={image}
+          alt={`${name} preview`}
+          className="w-full h-full object-cover"
+        />
       </div>
     </motion.div>
   );

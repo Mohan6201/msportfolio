@@ -5,15 +5,12 @@ import { fadeIn } from "../../framerMotion/variants";
 
 const projects = [
   {
-    name: "Vacation of Africa",
-    year: "Mar2022",
+    name: "Txenia Web App",
+    year: "Mar2024",
     align: "right",
-    image: "/images/website-img-1.jpg",
-    link: "#",
+    image: "/images/Txenia.png",
+    link: "https://txenia.ai/",
     description: {
-      job: "Trainee Consultant",
-      company: "Enterprise SoftLabs Pvt Ltd",
-      date: "2022 - Present",
       responsibilities: [
         "Managing Supply Chain Management change requests for Maersk.",
         "Analyzed and modified SQL stored procedures using SSMS.",
@@ -24,15 +21,12 @@ const projects = [
     },
   },
   {
-    name: "Moola App",
-    year: "Sept2022",
+    name: "Portfolio Web App",
+    year: "April2025",
     align: "left",
-    image: "/images/website-img-2.webp",
+    image: "/images/Reactp1.png",
     link: "#",
     description: {
-      job: "Trainee Consultant",
-      company: "Enterprise SoftLabs Pvt Ltd",
-      date: "2022 - Present",
       responsibilities: [
         "Managing Supply Chain Management change requests for Maersk.",
         "Analyzed and modified SQL stored procedures using SSMS.",
@@ -49,9 +43,6 @@ const projects = [
     image: "/images/website-img-3.jpg",
     link: "#",
     description: {
-      job: "Trainee Consultant",
-      company: "Enterprise SoftLabs Pvt Ltd",
-      date: "2022 - Present",
       responsibilities: [
         "Managing Supply Chain Management change requests for Maersk.",
         "Analyzed and modified SQL stored procedures using SSMS.",
@@ -68,9 +59,6 @@ const projects = [
     image: "/images/website-img-4.jpg",
     link: "#",
     description: {
-      job: "Trainee Consultant",
-      company: "Enterprise SoftLabs Pvt Ltd",
-      date: "2022 - Present",
       responsibilities: [
         "Managing Supply Chain Management change requests for Maersk.",
         "Analyzed and modified SQL stored procedures using SSMS.",
