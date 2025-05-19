@@ -10,6 +10,18 @@ const projects = [
     align: "right",
     image: "/images/website-img-1.jpg",
     link: "#",
+    description: {
+      job: "Trainee Consultant",
+      company: "Enterprise SoftLabs Pvt Ltd",
+      date: "2022 - Present",
+      responsibilities: [
+        "Managing Supply Chain Management change requests for Maersk.",
+        "Analyzed and modified SQL stored procedures using SSMS.",
+        "Troubleshot Azure and Cisco VPN Connectivity and Server Network Issues.",
+        "Handling product installation and configuration.",
+        "Administering Windows Active Directory.",
+      ],
+    },
   },
   {
     name: "Moola App",
@@ -17,6 +29,18 @@ const projects = [
     align: "left",
     image: "/images/website-img-2.webp",
     link: "#",
+    description: {
+      job: "Trainee Consultant",
+      company: "Enterprise SoftLabs Pvt Ltd",
+      date: "2022 - Present",
+      responsibilities: [
+        "Managing Supply Chain Management change requests for Maersk.",
+        "Analyzed and modified SQL stored procedures using SSMS.",
+        "Troubleshot Azure and Cisco VPN Connectivity and Server Network Issues.",
+        "Handling product installation and configuration.",
+        "Administering Windows Active Directory.",
+      ],
+    },
   },
   {
     name: "Tourzania",
@@ -24,6 +48,18 @@ const projects = [
     align: "right",
     image: "/images/website-img-3.jpg",
     link: "#",
+    description: {
+      job: "Trainee Consultant",
+      company: "Enterprise SoftLabs Pvt Ltd",
+      date: "2022 - Present",
+      responsibilities: [
+        "Managing Supply Chain Management change requests for Maersk.",
+        "Analyzed and modified SQL stored procedures using SSMS.",
+        "Troubleshot Azure and Cisco VPN Connectivity and Server Network Issues.",
+        "Handling product installation and configuration.",
+        "Administering Windows Active Directory.",
+      ],
+    },
   },
   {
     name: "Bank of Luck",
@@ -31,6 +67,18 @@ const projects = [
     align: "left",
     image: "/images/website-img-4.jpg",
     link: "#",
+    description: {
+      job: "Trainee Consultant",
+      company: "Enterprise SoftLabs Pvt Ltd",
+      date: "2022 - Present",
+      responsibilities: [
+        "Managing Supply Chain Management change requests for Maersk.",
+        "Analyzed and modified SQL stored procedures using SSMS.",
+        "Troubleshot Azure and Cisco VPN Connectivity and Server Network Issues.",
+        "Handling product installation and configuration.",
+        "Administering Windows Active Directory.",
+      ],
+    },
   },
 ];
 
@@ -46,17 +94,17 @@ const ProjectsMain = () => {
         <ProjectsText />
       </motion.div>
       <div className="flex flex-col gap-20 max-w-[900px] mx-auto mt-12">
-        {projects.map((project, index) => {
-          return (
-            <SingleProject
-              key={index}
-              name={project.name}
-              year={project.year}
-              align={project.align}
-              image={project.image}
-            />
-          );
-        })}
+        {projects.map((project, index) => (
+          <SingleProject
+            key={index}
+            name={project.name}
+            year={project.year}
+            align={project.align}
+            image={project.image}
+            link={project.link}
+            description={project.description}
+          />
+        ))}
       </div>
     </div>
   );
