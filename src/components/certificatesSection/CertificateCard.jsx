@@ -5,6 +5,7 @@ import { FaArrowDownLong } from "react-icons/fa6";
 import { PiCertificateBold } from "react-icons/pi";
 import { AiOutlineDown, AiOutlineUp, AiOutlineLink } from "react-icons/ai";
 import { FaReact } from "react-icons/fa";
+import CertificateLogo from "./CertificateLogo";
 
 const CertificateCard = ({
   icon: IconComponent = PiCertificateBold,
@@ -21,6 +22,13 @@ const CertificateCard = ({
     {
       title: "Amazon Solution Architect Associate",
       issuer: "RedSys9 Tech Pvt Ltd",
+      date: "2025-04-21",
+      description: "Completed a comprehensive Amazon Solution Architect Associate course.",
+      image: "images/ASA Certificate.jfif",
+    },
+    {
+      title: "DevOps Certified Expert",
+      issuer: "Guvi",
       date: "2025-04-21",
       description: "Completed a comprehensive Amazon Solution Architect Associate course.",
       image: "images/ASA Certificate.jfif",
@@ -94,7 +102,10 @@ const CertificateCard = ({
                     </h3>
 
                     <div className="text-sm mt-1 flex flex-col sm:flex-row sm:items-center sm:gap-4">
-                      <span className="text-cyan ">{cert.issuer}</span>
+                      <span className="text-cyan flex items-center gap-2">
+                        <CertificateLogo issuer={cert.issuer} />
+                        {cert.issuer}
+                      </span>
                       <span className="text-lightGrey">
                         {new Date(cert.date).toDateString()}
                       </span>
