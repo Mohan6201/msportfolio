@@ -40,7 +40,7 @@ const projects = [
     },
   },
   {
-    name: "Tourzania",
+    name: "Good Eggs",
     year: "Jan2023",
     align: "right",
     image: "/images/website-img-3.jpg",
@@ -56,7 +56,7 @@ const projects = [
     },
   },
   {
-    name: "Bank of Luck",
+    name: "Dr.Max",
     year: "May2024",
     align: "left",
     image: "/images/website-img-4.jpg",
