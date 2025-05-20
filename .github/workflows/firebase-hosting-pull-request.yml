@@ -14,8 +14,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  deploy_preview:
-    if: github.event_name == 'pull_request'
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -27,19 +26,4 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MS_PORTFOLIO_CAEE4 }}
           projectId: ms-portfolio-caee4
-          channelId: pr-${{ github.event.pull_request.number }}
-
-  deploy_live:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - run: npm ci && npm run build
-
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MS_PORTFOLIO_CAEE4 }}
-          projectId: ms-portfolio-caee4
-          # No channelId here - deploys to live by default
+          channelId: ${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || '' }}
