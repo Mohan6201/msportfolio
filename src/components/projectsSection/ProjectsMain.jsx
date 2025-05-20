@@ -6,7 +6,7 @@ import { fadeIn } from "../../framerMotion/variants";
 const projects = [
   {
     name: "Txenia Web App",
-    year: "Mar2024",
+    year: "Nov2023",
     align: "right",
     image: "/images/Txenia.png",
     link: "https://txenia.ai/",
@@ -57,7 +57,7 @@ const projects = [
   },
   {
     name: "Dr.Max",
-    year: "May2024",
+    year: "June2023",
     align: "left",
     image: "/images/dr.max.png",
     link: "https://www.drmax.eu/en/default",
