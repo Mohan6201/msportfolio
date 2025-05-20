@@ -49,7 +49,7 @@ const projects = [
     description: {
       responsibilities: [
         "Migrated Page Editor, Advantage Architect, Bartender, and SSMS from HighJump to Korber across DEV, UAT, and PROD environments.",
-        "Modified application URLs and configured IIS Manager for hosting the Korber Core app.",
+        "Modified application URLs in Page Editor and configured IIS Manager for hosting the Korber Core app.",
         "Managed the Good Eggs ticketing portal to resolve order-related issues and reported bugs.",
         "Documented solutions and support workflows using Confluence and facilitated communication via Slack.",
       ],
@@ -63,11 +63,11 @@ const projects = [
     link: "https://www.drmax.eu/en/default",
     description: {
       responsibilities: [
-        "Managing Supply Chain Management change requests for Maersk.",
-        "Analyzed and modified SQL stored procedures using SSMS.",
-        "Troubleshot Azure and Cisco VPN Connectivity and Server Network Issues.",
-        "Handling product installation and configuration.",
-        "Administering Windows Active Directory.",
+        "Executed end-to-end warehouse operations, covering all processes from receiving to shipping.",
+        "Configured Bartender software and modified stored procedures to align with deployment requirements.",
+        "Performed sanity testing to validate deployments and ensure system stability for DEV, UAT, and PROD Environments.",
+        "Set up initial printer configurations and configured remote printers on servers and tested it for DEV, UAT, and PROD Environments",
+        "Migrated and deployed stored procedures, applications, and databases across DEV, UAT, and PROD environments."
       ],
     },
   },
