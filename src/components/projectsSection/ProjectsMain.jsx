@@ -27,7 +27,7 @@ const projects = [
     year: "April2025",
     align: "left",
     image: "/images/Reactp2.png",
-    link: "#",
+    link: "https://ms-portfolio-caee4.web.app/",
     description: {
       responsibilities: [
         "Implemented CI/CD pipeline with GitHub Actions for Firebase Hosting, enabling automated deployments and preview channels for pull requests.",
@@ -45,7 +45,7 @@ const projects = [
     year: "Jan2023",
     align: "right",
     image: "/images/Goodeggs.png",
-    link: "#",
+    link: "https://www.goodeggs.com/",
     description: {
       responsibilities: [
         "Migrated Page Editor, Advantage Architect, Bartender, and SSMS from HighJump to Korber across DEV, UAT, and PROD environments.",
@@ -59,8 +59,8 @@ const projects = [
     name: "Dr.Max",
     year: "May2024",
     align: "left",
-    image: "/images/website-img-4.jpg",
-    link: "#",
+    image: "/images/dr.max.png",
+    link: "https://www.drmax.eu/en/default",
     description: {
       responsibilities: [
         "Managing Supply Chain Management change requests for Maersk.",
