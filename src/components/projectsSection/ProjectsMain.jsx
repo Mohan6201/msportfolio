@@ -30,6 +30,7 @@ const projects = [
     link: "#",
     description: {
       responsibilities: [
+        "Implemented CI/CD pipeline with GitHub Actions for Firebase Hosting, enabling automated deployments and preview channels for pull requests.",
         "Built a personal portfolio web app using React to showcase skills, projects, and experience.",
         "Added smooth animations and interactive transitions using Framer Motion for enhanced user experience.",
         "Integrated project cards, skill badges, and animated sections for dynamic presentation.",
