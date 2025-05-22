@@ -2,7 +2,7 @@ const ExperienceTopRight = () => {
   return (
     <div className="xl:w-[25%] lg:w-[30%] border border-lightBrown p-4 rounded-xl">
       <p className="text-lg text-center text-lightGrey">
-      I have professional experience in building and managing{" "}
+      Well-versed in building and managing{" "}
 <span className="font-bold text-white">DevOps pipelines</span> for full-stack applications using{" "}
 <span className="font-bold text-white">Django</span>,{" "}
 <span className="font-bold text-white">React</span>, and{" "}
