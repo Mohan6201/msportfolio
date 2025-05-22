@@ -1,4 +1,4 @@
-import { FaAws, FaDocker, FaJenkins } from "react-icons/fa";
+import { FaAws, FaDocker, FaFire, FaJenkins } from "react-icons/fa";
 import { SiGithubactions, SiKubernetes, SiLinux, SiPython, SiTerraform } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { TbBrandAnsible, TbBrandDjango } from "react-icons/tb";
@@ -10,6 +10,10 @@ const skills = [
   {
     skill: "Aws Services",
     icon: FaAws,
+  },
+  {
+    skill: "Firebase",
+    icon: FaFire,
   },
   {
     skill: "Docker",
