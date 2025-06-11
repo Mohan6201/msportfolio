@@ -4,7 +4,7 @@ const NavbarLogo = () => {
       {/* Logo with animated glow + spin on hover */}
       <div className="relative w-10 h-10 sm:w-12 sm:h-12">
         <img
-          src="/icons/ms-icon-180.png"
+          src="/icons/3d-icon1.png"
           alt="MS Logo"
           className="
             w-full h-full object-contain rounded-full
