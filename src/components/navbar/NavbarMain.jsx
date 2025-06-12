@@ -8,31 +8,29 @@ const NavbarMain = () => {
   const menuOpen = useSelector((state) => state.menu.menuOpen);
 
   return (
-    <nav className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1300px] z-20 px-4 mt-2">
-      <div className="flex items-center justify-between w-full bg-black p-4 rounded-full border border-orange">
-        {/* Logo */}
+    <nav className="w-full fixed top-0 z-20 px-4">
+      {/* MAIN NAVBAR */}
+      <div className="flex items-center justify-between bg-black border border-orange rounded-full px-4 py-3 max-w-[1300px] mx-auto">
+        {/* Left: Logo */}
         <NavbarLogo />
 
-        {/* Desktop Nav Links */}
-        <div className="hidden lg:flex gap-6 items-center">
+        {/* Center: Nav Links for Desktop */}
+        <div className="hidden lg:block">
           <NavbarLinks />
         </div>
 
-        {/* Desktop CTA Button */}
-        <div className="hidden lg:block">
+        {/* Right: Button + Toggler */}
+        <div className="flex items-center gap-3">
           <NavbarBtn />
-        </div>
-
-        {/* Mobile Toggler + CTA Button */}
-        <div className="lg:hidden flex items-center gap-3">
-          <NavbarBtn />
-          <NavbarToggler />
+          <div className="lg:hidden">
+            <NavbarToggler />
+          </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* MOBILE MENU DROPDOWN */}
       {menuOpen && (
-        <div className="lg:hidden mt-2 bg-black border border-orange rounded-xl px-4 py-3">
+        <div className="lg:hidden max-w-[1300px] mx-auto px-4 py-2">
           <NavbarLinks />
         </div>
       )}
