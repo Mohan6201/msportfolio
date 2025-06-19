@@ -4,7 +4,7 @@ import { fadeIn } from "../../framerMotion/variants";
 import ResumePreview from "./ResumePreview";
 
 const ResumeMain = () => {
-  const resumeFile = "/assets/resume.pdf"; // Make sure this path is correct
+  const resumeFile = "/assets/Mohan (Resume).pdf"; // Make sure this path is correct
 
   return (
     <div
