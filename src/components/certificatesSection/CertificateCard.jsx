@@ -20,18 +20,18 @@ const CertificateCard = ({
 
   const certificates = [
     {
-      title: "Amazon Solution Architect Associate",
-      issuer: "RedSys9 Tech Pvt Ltd",
-      date: "2025-04-21",
-      description: "Acquired skills to design scalable, secure, and reliable AWS cloud architectures using core services like EC2, S3, and VPC.",
-      image: "images/ASA Certificate.jfif",
-    },
-    {
       title: "DevOps Certified Expert (In-Progress)",
       issuer: "Guvi",
       date: "2025-05-17",
       description: "This program includes hands-on training with top tools like Git, Jenkins, Docker, Ansible, Terraform and Kubernetes.",
       image: "images/blank.png",
+    },
+    {
+      title: "Amazon Solution Architect Associate",
+      issuer: "RedSys9 Tech Pvt Ltd",
+      date: "2025-04-21",
+      description: "Acquired skills to design scalable, secure, and reliable AWS cloud architectures using core services like EC2, S3, and VPC.",
+      image: "images/ASA Certificate.jfif",
     },
     {
       title: "Warehouse Advantage Certified Associate",

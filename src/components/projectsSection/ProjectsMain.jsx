@@ -5,6 +5,24 @@ import { fadeIn } from "../../framerMotion/variants";
 
 const projects = [
   {
+    name: "React Portfolio Web App",
+    year: "April2025",
+    align: "left",
+    image: "/images/Reactp2.png",
+    link: "https://ms-portfolio-caee4.web.app/",
+    description: {
+      responsibilities: [
+        "Implemented CI/CD pipeline with GitHub Actions for Firebase Hosting, enabling automated deployments and preview channels for pull requests.",
+        "Built a personal portfolio web app using React to showcase skills, projects, and experience.",
+        "Added smooth animations and interactive transitions using Framer Motion for enhanced user experience.",
+        "Integrated project cards, skill badges, and animated sections for dynamic presentation.",
+        "Optimized for performance and mobile responsiveness across all screen sizes.",
+        "Structured the app with reusable components and clean code architecture for scalability.",
+        "Deployed the app on a cloud platform using firebase hosting",
+      ],
+    },
+  },
+  {
     name: "Txenia Web App",
     year: "Nov2023",
     align: "right",
@@ -19,24 +37,6 @@ const projects = [
         "Configured Route 53 with load balancer DNS for production-ready access.",
         "Set up virtual environments for isolated service deployments and model execution.",
         "Designed the system to support warehouse management operations end-to-end.",
-      ],
-    },
-  },
-  {
-    name: "Portfolio Web App",
-    year: "April2025",
-    align: "left",
-    image: "/images/Reactp2.png",
-    link: "https://ms-portfolio-caee4.web.app/",
-    description: {
-      responsibilities: [
-        "Implemented CI/CD pipeline with GitHub Actions for Firebase Hosting, enabling automated deployments and preview channels for pull requests.",
-        "Built a personal portfolio web app using React to showcase skills, projects, and experience.",
-        "Added smooth animations and interactive transitions using Framer Motion for enhanced user experience.",
-        "Integrated project cards, skill badges, and animated sections for dynamic presentation.",
-        "Optimized for performance and mobile responsiveness across all screen sizes.",
-        "Structured the app with reusable components and clean code architecture for scalability.",
-        "Deployed the app on a cloud platform using firebase hosting",
       ],
     },
   },
