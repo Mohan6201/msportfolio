@@ -10,7 +10,7 @@ const NavbarMain = () => {
   return (
     <nav className="w-full fixed top-0 z-20 px-4">
       {/* MAIN NAVBAR */}
-      <div className="flex items-center justify-between bg-black border border-orange rounded-full px-4 py-3 max-w-[1300px] mx-auto">
+      <div className="flex items-center justify-between bg-black border mt-3 border-orange rounded-full px-4 py-3 max-w-[1300px] mx-auto">
         {/* Left: Logo */}
         <NavbarLogo />
 

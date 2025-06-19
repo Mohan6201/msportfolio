@@ -7,7 +7,7 @@ const projects = [
   {
     name: "React Portfolio Web App",
     year: "April2025",
-    align: "left",
+    align: "right",
     image: "/images/Reactp2.png",
     link: "https://ms-portfolio-caee4.web.app/",
     description: {
@@ -25,7 +25,7 @@ const projects = [
   {
     name: "Txenia Web App",
     year: "Nov2023",
-    align: "right",
+    align: "left",
     image: "/images/Txenia.png",
     link: "https://txenia.ai/",
     description: {
