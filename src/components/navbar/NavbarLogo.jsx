@@ -22,7 +22,7 @@ const NavbarLogo = () => {
         {/* 2. PNG-based static glow overlay */}
         <div className="absolute inset-0 z-0 pointer-events-none opacity-60">
           <img
-            src="/icons/3d-icon1.png"
+            src="/icons/actual_icon.ico"
             alt="Glow"
             className="w-full h-full object-contain drop-shadow-[0_0_15px_rgba(0,255,255,0.6)]"
           />
@@ -30,7 +30,7 @@ const NavbarLogo = () => {
 
         {/* 3. Main logo with hover spin */}
         <img
-          src="/icons/3d-icon1.png"
+          src="/icons/actual_icon.ico"
           alt="MS Logo"
           className="
             w-full h-full
