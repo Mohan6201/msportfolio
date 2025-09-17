@@ -30,7 +30,7 @@ const HeroText = () => {
         viewport={{ once: false, amount: 0 }}
         className="text-lg mt-4"
       >
-        AWS DevOps Engineer with 3.4 years of experience in automating infrastructure,<br/>implementing CI/CD pipelines, and optimizing 
+        AWS DevOps Engineer with 3.5 years of experience in automating infrastructure,<br/>implementing CI/CD pipelines, and optimizing 
         system performance using AWS<br/>services.
       </motion.p>
     </div>

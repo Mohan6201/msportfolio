@@ -7,7 +7,7 @@ const experiences = [
   {
     job: "Trainee Consultant",
     company: "Enterprise SoftLabs Pvt Ltd",
-    date: "2022 - Present",
+    date: "APR2022 - DEC2022",
     responsibilities: [
       "Managing Supply Chain Management change requests for Maersk.",
       "Analyzed and modified SQL stored procedures using SSMS.",
@@ -19,7 +19,7 @@ const experiences = [
   {
     job: "Staff Consultant",
     company: "Enterprise SoftLabs Pvt Ltd",
-    date: "2023 - Present",
+    date: "DEC2022 - JUL2023",
     responsibilities: [
       "Migrated projects from HighJump to Körber (DB, apps, configs, Bartender, IIS, Remote Printers) for all three Environments(Dev, Uat, Prod).",
       "Managed Wms deployments across all environments with High Scalability.",
@@ -29,7 +29,7 @@ const experiences = [
   {
     job: "Aws Dev-Ops Engineer",
     company: "Enterprise SoftLabs Pvt Ltd",
-    date: "2025 - Present",
+    date: "JUL2023 - AUG2025",
     responsibilities: [
       "Built CI/CD for Txenia AI/ML WMS app using CodePipeline and GitHub Actions.",
       "Managed AWS (EC2, S3, IAM, Route 53) for scalable infrastructure.",
